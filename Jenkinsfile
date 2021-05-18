@@ -7,8 +7,6 @@ node{
         checkout scm
     }
     stage("build"){
-        sh """sudo groupadd docker"""
-        sh """docker ps"""
         sh """docker build -t hello ."""
     }
     stage("run"){
